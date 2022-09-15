@@ -1,0 +1,23 @@
+name: DeqlareTimer
+main: deqlare.timer.DeqlareTimer
+version: 0.0.1
+
+commands:
+  deqlaretimer:
+    usage: /deqlaretimer (start|stop|restart|back)
+           /deqlaretimer (savecoords) <name>
+    description: TimerShit
+    aliases: [dt, dm]
+permissions:
+  deqlaretimer.admin:
+    description: Allows all commands to be used
+    default: op
+    children:
+      deqlaretimer.start: true
+      deqlaretimer.stop: true
+      deqlaretimer.restart: true
+      deqlaretimer.locate: true
+      deqlaretimer.savecoords: true
+
+
+softdepend: [PlaceholderAPI]
